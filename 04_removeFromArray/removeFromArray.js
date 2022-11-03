@@ -28,17 +28,18 @@ const removeFromArray = function(array, ...elementsToRemove) {
     for (subElement of elementsToRemove) {
         for (let i = 0; i < array.length; i++) {
             if (subElement === array[i]) {
-                console.log(`loop 2: ${i}`)
                 array.splice(i, 1);
             }
         }
     }
 
+    return array
+
 //error because when splices for the first time, gets rid of an element and therefore array length is decreased, and indices are changed
 //solution to that problem was to parse the elements to remove first and compare them with each one of the array
 //therefore using the new length of the array each time it is spliced 
 
-    return array
+
 };
 
 // Do not edit below this line
